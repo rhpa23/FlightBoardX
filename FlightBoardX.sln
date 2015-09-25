@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightBoardX", "FlightBoardX\FlightBoardX.csproj", "{BA8649D1-08E7-4716-85B2-76B77A2AC17E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FlightBoardXSetup", "FlightBoardXSetup\FlightBoardXSetup.vdproj", "{F2BCBD4B-702F-4EC9-9914-E2ACBC206240}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA8649D1-08E7-4716-85B2-76B77A2AC17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA8649D1-08E7-4716-85B2-76B77A2AC17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA8649D1-08E7-4716-85B2-76B77A2AC17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA8649D1-08E7-4716-85B2-76B77A2AC17E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BCBD4B-702F-4EC9-9914-E2ACBC206240}.Debug|Any CPU.ActiveCfg = Debug
+		{F2BCBD4B-702F-4EC9-9914-E2ACBC206240}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

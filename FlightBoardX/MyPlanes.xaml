@@ -1,0 +1,29 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Models="clr-namespace:FlightBoardX.Models" mc:Ignorable="d" x:Name="load" x:Class="FlightBoardX.MyPlanes"
+        Title="MyPlaness" Height="500" Width="570" Loaded="load_Loaded" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <CollectionViewSource x:Key="planeViewSource" d:DesignSource="{d:DesignInstance {x:Type Models:Plane}, CreateList=True}"/>
+    </Window.Resources>
+
+    <Grid DataContext="{StaticResource planeViewSource}">
+        <Label Content="Companny" HorizontalAlignment="Left" Margin="13,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.27,0.462"/>
+        <TextBox Name="CompannyTextBox" HorizontalAlignment="Left" Height="23" Margin="91,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223"/>
+        <DataGrid Name="MyPlanessDataGrid" Margin="10,132,20,0" VerticalAlignment="Top" Height="300" ItemsSource="{Binding}" SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Companny" Binding="{Binding Companny}" />
+                <DataGridTextColumn Header="Country" Binding="{Binding Country}" />
+                <DataGridTextColumn Header="Model" Binding="{Binding ModelName}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="AddButton" Content="Add" HorizontalAlignment="Left" Margin="467,71,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click" />
+        <Button Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="467,438,0,0" VerticalAlignment="Top" Width="75" Click="CloseButton_Click"/>
+        <Button Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="239,437,0,0" VerticalAlignment="Top" Width="75" Click="DeleteButton_Click"/>
+        <Label Content="Country" HorizontalAlignment="Left" Margin="26,62,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="CountryComboBox" HorizontalAlignment="Left" Margin="91,65,0,0" VerticalAlignment="Top" Width="223"/>
+        <Label Content="Model" HorizontalAlignment="Left" Margin="39,93,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ModelComboBox" HorizontalAlignment="Left" Margin="91,97,0,0" VerticalAlignment="Top" Width="223"/>
+        <Button x:Name="ModelsButton" Content="..." HorizontalAlignment="Left" Margin="335,97,0,0" VerticalAlignment="Top" Width="20" Click="ModelsButton_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Models="clr-namespace:FlightBoardX.Models" mc:Ignorable="d" x:Class="FlightBoardX.MainWindow"
+        Title="MainWindow" Height="413" Width="697" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <CollectionViewSource x:Key="boardJobViewSource" d:DesignSource="{d:DesignInstance {x:Type Models:BoardJob}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource boardJobViewSource}">
+        <DataGrid x:Name="boardJobDataGrid" AutoGenerateColumns="True" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="19,41,131,59" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True"/>
+
+
+        <Button x:Name="BasesButton" Content="My Bases" HorizontalAlignment="Right" Margin="0,302,36,0" VerticalAlignment="Top" Width="75" Click="BasesButton_Click" />
+        <Button x:Name="PlanesButton" Content="My Planes" HorizontalAlignment="Right" Margin="0,247,36,0" VerticalAlignment="Top" Width="75" Click="PlanesButton_Click_1"/>
+        <Button x:Name="ReGenJobsButton" Content="Genarate Jobs" Margin="0,41,31,0" VerticalAlignment="Top" Click="ReGenJobsButton_Click" HorizontalAlignment="Right" Width="80" Height="50" />
+        <Button x:Name="RunJoButton" Content="Run Job" Margin="0,114,31,0" VerticalAlignment="Top" Height="53" Click="RunJoButton_Click" HorizontalAlignment="Right" Width="80"/>
+        <Label x:Name="MoneyLabel" Content="" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" />
+        <Label x:Name="CurrentLocationLabel" Content="" Margin="20,0,0,31" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left"  />
+        <Button x:Name="ChangeLocationButton" Content="Change" Margin="20,0,0,9" VerticalAlignment="Bottom"  HorizontalAlignment="Left" Click="ChangeLocationButton_Click" />
+    </Grid>
+
+
+
+</Window>
